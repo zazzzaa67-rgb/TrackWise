@@ -47,13 +47,41 @@
 
         </section>
         <section id="add">
-            <h2></h2>
-            <input 
-            id="adding",
-            type="text",
-            required,
-            name="adding",
-            placeholder="Enter the process ">
+
+            <h2>Add <span>Process</span></h2>
+            <form>
+                <h2>Your process info </h2>
+                <label for="amount">Amount</label>
+                <input 
+                type="number" 
+                id="amount" 
+                name="amount" 
+                required 
+                maxlength="9"
+                placeholder="100000000">
+                <label for="category">Category</label>
+                <input 
+                type="text"
+                id = "category"
+                name="category"
+                required
+                placeholder="Food">
+                <label for="date">Date</label>
+                <input 
+                type="date" 
+                id="date"
+                name="date"
+                placeholder="Enter the date">
+                <!-- ******Start from here : we will add the Another inputs **** -->
+                <fieldset>
+                    <legend>Enter your process type</legend>
+                    <label for="income">Income</label>
+                    <input type="radio" id="income" name="income" required >
+                    <label for="expense">Expense</label>
+                    <input type="radio" id="expense" name="expense" required>
+                </fieldset>
+
+            </form>
             <div id="done">
 
             </div>
