@@ -52,7 +52,8 @@
             <form>
                 <h2>Your process info </h2>
                 <label for="amount">Amount</label>
-                <input 
+                <input
+                class="adding-info"
                 type="number" 
                 id="amount" 
                 name="amount" 
@@ -60,19 +61,37 @@
                 maxlength="9"
                 placeholder="100000000">
                 <label for="category">Category</label>
-                <input 
+                <input
+                class="adding-info" 
                 type="text"
                 id = "category"
                 name="category"
                 required
                 placeholder="Food">
                 <label for="date">Date</label>
-                <input 
+                <input
+                class="adding-info" 
                 type="date" 
                 id="date"
                 name="date"
-                placeholder="Enter the date">
-                <!-- ******Start from here : we will add the Another inputs **** -->
+                placeholder="Enter the date"
+                required>
+                <label for="note">Note</label>
+                <input 
+                class="adding-info"
+                type="text" 
+                id="note"
+                name="note"
+                placeholder="Enter your Note">
+                <label for="time">Time</label>
+                <input 
+                class="adding-info"
+                type="time" 
+                id="time"
+                name="time"
+                placeholder=""
+                required
+                pattern="[110]+">
                 <fieldset>
                     <legend>Enter your process type</legend>
                     <label for="income">Income</label>
@@ -80,14 +99,15 @@
                     <label for="expense">Expense</label>
                     <input type="radio" id="expense" name="expense" required>
                 </fieldset>
-
+                <button type="submit" id="submitbtn">Submit</button>
             </form>
-            <div id="done">
-
+        </section>
+        <section id="history">
+            <h2>Your Financial transaction History </h2>
+            <img src="photos/historyph.jpg" alt="photo for mony">
+            <div id="transactions">
             </div>
-        
-
-
+            <!-- Tomorrow I will add the buttons here   -->
         </section>
     </main>
     
