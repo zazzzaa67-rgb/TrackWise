@@ -146,13 +146,87 @@
                 <div class="month" id="September"></div>
                 <div class="month" id="October"></div>
                 <div class="month" id="November"></div>
-                <div class="month" id="December"></div>   
+                <div class="month" id="December"></div>
+                
             </div>
-            <!-- tomorrow I will add a comparison and going to css -->
+            <div id="top_spennding">
+                <h1>Top Spending Category</h1>
+                <p>No anything here until now </p>
+                <!-- We show the top category of spending -->
+            </div>
+            <div id="saving">
+                <!-- here we will compare between incomes and expenses   -->
+
+            </div>
 
         </section>
-        
+        <section id="sign-up">
+            <form>
+                <h2>Sign <span>up</span></h2>
+                <label for="name">Name</label>
+                <input 
+                id="name"
+                class="user-info"
+                type="text"
+                maxlength="10"
+                required
+                placeholder="Ahmed"
+                pattern="[a-zA-Z]+"
+                >
+                <label for="fullname">Fullname</label>
+                <input
+                id="fullname"
+                class="user-info"
+                type="text"
+                minlength="4"
+                required
+                placeholder="Ahmed Mohamed"
+                pattern="[a-zA-Z]+"
+                >
+                <label for="Email">Email</label>
+                <input 
+                id="Email"
+                class="user-info"
+                type="email"
+                placeholder="Ahmed@Mo.com"
+                required
+                minlength="5">
+
+                <label for="password">Password</label>
+                <input 
+                id="password"
+                class="user-info"
+                type="password"
+                pattern="[a-zA-Z!@#$%]+"
+                placeholder="A123!@$"
+                required
+                minlength="5"
+                
+                >   
+                <select class="user-info">
+                    <option>Egypt</option>
+                    <option>Saudi Arabia</option>
+                    <option>United Arab Emirates</option>
+                    <option>Iraq</option>
+                    <option>Syria</option>
+                    <option>Jordan</option>
+                    <option>Lebanon</option>
+                    <option>Morocco</option>
+                    <option>Algeria</option>
+                    <option>Qatar</option>
+                </select>
+                <textarea>
+                    <!-- Tomorrow : I will add the another country and going to css  -->
+                </textarea>
+                
+
+            </form>
+        </section>
     </main>
+    <footer>
+        
+        <p>Developed by <a href="" target="_blank">Ahmed Mohamed</a> </p>
+    </footer>
     
 </body>
 </html>
