@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- some info -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrackWise</title>
-</head>
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Css -->
+    <link  rel="stylesheet" href="style.css">
+    </head>
 <body>
     <header>
         <button id="symbol">☰</button>
         <nav>
             <ul>
-                <li><button class="link" id="Home">🏠Home</button></li>
-                <li><button class="link" id="Add">Add</button></li>
-                <li><button class="link" id="reports">reports</button></li>
-                <li><button class="link" id="History">your History</button></li>
-                <li><button class="link" id="settings">Setting</button></li>
+                <li><button class="link" id="Home"><i class="fa-solid fa-house"></i>Home</button></li>
+                <li><button class="link" id="Add"><i class="fa-solid fa-table-rows-add-below"></i>Add</button></li>
+                <li><button class="link" id="reports"><i class="fa-regular fa-chart-bar"></i>Reports</button></li>
+                <li><button class="link" id="History"><i class="fa-duotone fa-solid fa-rectangle-history"></i>your History</button></li>
+                <li><button class="link" id="settings"><i class="fa-regular fa-aperture"></i>Setting</button></li>
             </ul>
         </nav>
     </header>
@@ -204,6 +216,15 @@
                 
                 >   
                 <select class="user-info">
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option>Canada</option>
+                    <option>Australia</option>
+                    <option>New Zealand
+                    <option>Ireland</option>
+                    <option>South Africa</option>
+                    <option>Singapore</option>
+                    <option>India</option>
                     <option>Egypt</option>
                     <option>Saudi Arabia</option>
                     <option>United Arab Emirates</option>
@@ -215,12 +236,12 @@
                     <option>Algeria</option>
                     <option>Qatar</option>
                 </select>
-                <textarea>
+                <textarea placeholder="Enter your opinion about the web">
+                    
                     <!-- Tomorrow : I will add the another country and going to css  -->
                     <!-- use Font awesome -->
                 </textarea>
                 
-
             </form>
         </section>
     </main>
@@ -228,6 +249,5 @@
         
         <p>Developed by <a href="" target="_blank">Ahmed Mohamed</a> </p>
     </footer>
-    
 </body>
 </html>
