@@ -8,7 +8,7 @@ body{
     background-color: #fff;
 
 }
-header ,#home-sec , .About ,#history {
+header,#home-sec , .About ,#history {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -102,12 +102,49 @@ img{
     width: 200px ;
     height:200px ;
     border:solid 2px  #ffffff;
-    border-radius: 3px;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 10px 15px;
     padding: 15px 15px ;
     background-color: #252525;
     color: #adff2f;
+    font-weight: bold;
+    line-height: 23px;    
+}
+.info:hover{
+    background-color:#14213d;
+    color: #ffffff;
+    cursor: pointer;  
 }
 
+#quote-img{
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    margin-right: 10px;
+}
+#quote{
+    margin-right: 12px;
+    font-weight: bold;
+    line-height: 23px;
+
+}
+.quote-sec{
+    background-color: #fff;
+    border: solid 2px #252525;
+    border-radius: 4px;
+    width: fit-content ;
+    height: fit-content;
+    display: flex;
+    padding: 20px 15px ;
+}
+h2{
+    color:#252525 ;
+}
+#history , #add, #reports, #sign-up{
+    display: none;
+}
+/* we will complete styling another sections tomorrow  */
