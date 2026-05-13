@@ -2,6 +2,6 @@
 // use one EventListener to listen to all page with e.target.____
 // use logical NOT operator (!)
 // use toggle
-// practice map(), forEach() , for of, normal for loop , and join() method do not start write javaScript code if did not do that
+// practice map(), forEach() , for of, normal for loop ,continue and break, and join() method do not start write javaScript code if did not do that
 
 //use uuid 
