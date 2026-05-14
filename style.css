@@ -8,7 +8,7 @@ body{
     background-color: #fff;
 
 }
-header,#home-sec , .About ,#history {
+header,main,#home-sec , .About ,#history,#add {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -116,7 +116,8 @@ img{
 .info:hover{
     background-color:#14213d;
     color: #ffffff;
-    cursor: pointer;  
+    cursor: pointer;
+    border: solid 2px #8e24d4;  
 }
 
 #quote-img{
@@ -144,7 +145,46 @@ img{
 h2{
     color:#252525 ;
 }
-#history , #add, #reports, #sign-up{
+#history , #home-sec, #reports, #sign-up{
     display: none;
 }
-/* we will complete styling another sections tomorrow  */
+#add-info{
+    width : 350px ;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color : #ffffff;
+    background-color: #252525;
+    padding: 15px 20px ;
+    border:solid 2px #8e24d4 ;
+    border-radius: 3px;
+    height: 550px ; 
+    justify-content: space-around;
+}
+label{
+    cursor: pointer;
+    margin-left: 35px;
+}
+.adding-info{
+    margin: 3px auto;
+    width : 250px ;
+    padding: 10px 15px ;
+    font-weight:600;
+    border: solid 1px #8e24d4;
+    border-radius: 2px;
+}
+#submitbtn{
+    width : 200px ;
+    color : #ffffff;
+    background-color: #8e24d4;
+    border: solid 1px #ffffff;
+    border-radius: 3px ;
+    font-weight: 700;
+    margin: 8px auto;
+    padding : 10px 15px ; 
+}
+#submitbtn:hover , #submitbtn:focus{
+    background-color: #3d095f;
+    border: 2px ;
+}
+/* we will complete history and reports section */
