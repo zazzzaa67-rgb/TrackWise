@@ -127,14 +127,14 @@
             </form>
         </section>
         <section id="history">
-            <h2>Your Financial transaction History </h2>
+            <h2>Your Financial <span>transaction History</span> </h2>
             <img class="photo" src="photos/historyph.jpg" alt="photo for mony">
-            <div id="buttons">
-                <button id="delete" class="historybtns">Delete</button>
-                <button id="edit" class="historybtns">Edit</button>
-                <button id="sorting" class="historybtns">Sorting</button>
-                <button id="Filter" class="historybtns">Filter</button>
-                <button id="search" class="historybtns">Search</button>
+            <div id="his-buttons">
+                <button id="delete" class="historybtn">Delete</button>
+                <button id="edit" class="historybtn">Edit</button>
+                <button id="sorting" class="historybtn">Sorting</button>
+                <button id="Filter" class="historybtn">Filter</button>
+                <button id="search" class="historybtn">Search</button>
 
             </div>
             <div id="transactions"> 
@@ -143,10 +143,18 @@
         </section>
         <section id="reports">
             <h2>Manage your balance<span>Wisely</span></h2>
+            <h3>Total <span>summary</span></h3>
             <div class="total-summary">
-                <h3>Total summary</h3>
-                <p id="expenses" class="total-expenses">NO Expense until now</p>
-                <p id="incomes" class="total-income">NO incomes until now</p>
+                <div class="container">
+                    <div class="total">
+                        <h4>Expenses</h4>
+                        <p id="expenses">NO Expense until now</p>
+                    </div>
+                    <div class="total"> 
+                        <h4>Incomes</h4>
+                        <p id="incomes" >NO incomes until now</p>
+                    </div>
+                </div>
                 <p id="the-profit">NO Profits until now</p>
             </div>
             <div id="Expenses-Category">
