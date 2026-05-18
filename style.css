@@ -113,6 +113,7 @@ img{
     color: #adff2f;
     font-weight: bold;
     line-height: 23px;    
+    cursor: pointer;
 }
 .info:hover{
     background-color:#14213d;
@@ -204,9 +205,31 @@ p{
 }
 h3 , h2{
     font-size: 30px ;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 .container{
     display : flex; 
+}
+#categoty , #monthly-report{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #9acd32;
+    color: #252525;
+    font-weight: bold;
+    border: solid 2px #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+.tample{
+    min-height: 200px ;
+    height: fit-content;
+    width:300px ;
+    border: solid 2px #252525;
+    border-radius: 3px ;
+
 }
 /* we will complete history and reports section , change hover color  */
