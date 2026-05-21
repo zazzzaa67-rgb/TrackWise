@@ -14,7 +14,8 @@ main,
 .About ,
 #history,
 #add ,
-#his-buttons,#reports,#sign-up{
+#his-buttons,
+#reports{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -151,9 +152,13 @@ img{
     padding: 20px 15px ;
 }
 h2{
-    color:#252525 ;
+    color:#252525;
 }
-#add-info , #sing-form{
+.signt{
+    color: #ffffff;
+}
+.new {
+    margin: 10px auto;
     width : 350px ;
     display: flex;
     flex-direction: column;
@@ -178,7 +183,7 @@ label{
     border: solid 1px #8e24d4;
     border-radius: 2px;
 }
-#submitbtn ,.historybtn{
+#addbtn ,.historybtn ,#singupbtn{
     width : 200px ;
     color : #ffffff;
     background-color: #8e24d4;
@@ -189,7 +194,10 @@ label{
     padding : 10px 15px ;
     cursor: pointer; 
 }
-#submitbtn:hover , #submitbtn:focus,.historybtn:hover {
+#submitbtn:hover ,
+#submitbtn:focus,
+.historybtn:hover , 
+#singupbtn:hover {
     background-color: #adff2f;
     border: 2px ;
     color: #252525;
@@ -240,13 +248,27 @@ h3 , h2{
     justify-content: center;
     margin-top: 10px;
 }
-#add,#home-sec, #history{
+
+#add,#reports, #history ,#sign-up {
     display: none;
 }
 #sing-form{
-    width : 300px ; 
-    
-
+    position: fixed;
+    top : 50%;
+    bottom: 50%;
+    transform:translate(-50%,-50%) ;
+}
+#close{
+    margin-left: auto;
+    background-color: #252525;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    font-size: 20px ;
+    cursor: pointer;
+}
+.hide{
+    display: flex;
 }
 /* Start javaScript  */
 /* we will complete history and reports section , change hover color  */

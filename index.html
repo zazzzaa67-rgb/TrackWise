@@ -73,7 +73,7 @@
         <section id="add">
 
             <h2>Add <span>Process</span></h2>
-            <form id="add-info">
+            <form id="add-info" class="new">
                 <h2>Your process info </h2>
                 <label for="amount">Amount</label>
                 <input
@@ -123,7 +123,7 @@
                     <label for="expense">Expense</label>
                     <input type="radio" id="expense" name="expense" required>
                 </fieldset>
-                <button type="submit" id="submitbtn">Submit</button>
+                <button type="submit" id="addbtn">Submit</button>
             </form>
         </section>
         <section id="history">
@@ -198,8 +198,9 @@
             </div>
         </section>
         <section id="sign-up">
-            <h2>Sign <span>up</span></h2>
-            <form id="sing-form">
+            <form id="sing-form" class="new">
+                <button id="close"><i class="fa-solid fa-xmark"></i></button>
+                <h2 class="signt">Sign <span>up</span></h2>
                 <label for="name">Name</label>
                 <input 
                 id="name"
@@ -260,12 +261,7 @@
                     <option>Algeria</option>
                     <option>Qatar</option>
                 </select>
-                <textarea placeholder="Enter your opinion about the web">
-                    
-                    
-                    <!-- use Font awesome -->
-                </textarea>
-                <button type="submit"> Submit </button>
+                <button type="submit" id="singupbtn"> Submit </button>
                 
             </form>
         </section>
@@ -274,5 +270,6 @@
         
         <p>Developed by <a href="" target="_blank">Ahmed Mohamed</a> </p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
