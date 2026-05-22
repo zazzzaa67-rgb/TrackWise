@@ -22,16 +22,16 @@
         <button id="symbol">☰</button>
         <nav>
             <ul>
-                <li><button class="link" id="Home"><i class="fa-solid fa-house"></i> Home</button></li>
-                <li><button class="link" id="Add"><i class="fa-solid fa-plus"></i> Add</button></li>
-                <li><button class="link" id="reports"><i class="fa-regular fa-chart-bar"></i> Reports</button></li>
-                <li><button class="link" id="History"><i class="fa-solid fa-clock-rotate-left"></i> your History</button></li>
-                <li><button class="link" id="settings"><i class="fa-solid fa-bars-staggered"></i> Setting</button></li>
+                <li><button class="link" id="Homebtn"><i class="fa-solid fa-house"></i> Home</button></li>
+                <li><button class="link" id="Addbtn"><i class="fa-solid fa-plus"></i> Add</button></li>
+                <li><button class="link" id="reportsbtn"><i class="fa-regular fa-chart-bar"></i> Reports</button></li>
+                <li><button class="link" id="Historybtn"><i class="fa-solid fa-clock-rotate-left"></i> your History</button></li>
+                <li><button class="link" id="settingsbtn"><i class="fa-solid fa-bars-staggered"></i> Setting</button></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home-sec" >
+        <section id="home-sec"  class="page" >
             <div class="title">
                 <h1>Track <span>wise</span> </h1>
                 <p class="phrase">Take control of your balance</p>
@@ -70,7 +70,7 @@
             
 
         </section>
-        <section id="add">
+        <section id="add" class="page">
 
             <h2>Add <span>Process</span></h2>
             <form id="add-info" class="new">
@@ -126,7 +126,7 @@
                 <button type="submit" id="addbtn">Submit</button>
             </form>
         </section>
-        <section id="history">
+        <section id="history" class="page">
             <h2>Your Financial <span>transaction History</span> </h2>
             <img class="photo" src="photos/historyph.jpg" alt="photo for mony">
             <div id="his-buttons">
@@ -141,7 +141,7 @@
                 <p>No transactions yet.</p>
             </div>
         </section>
-        <section id="reports">
+        <section id="reports" class="page">
             <h2>Manage your balance<span>Wisely</span></h2>
             <h3>Total <span>summary</span></h3>
             <div class="total-summary">
@@ -196,6 +196,20 @@
                 </div>
                 <!-- We show the top category of spending -->
             </div>
+        </section>
+        <section id="settings">
+            <h3>Set your <span>Mood</span></h3>
+            <div class="container">
+                <div type="button" id="history ">Delete your History </div>
+                <div class="light">
+                    <p>Dark/white</p>
+                    <div>
+                        ☀
+                    </div>
+                </div>
+            </div>
+            <!-- Complete this and style it then go to javaScript -->
+
         </section>
         <section id="sign-up">
             <form id="sing-form" class="new">
