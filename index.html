@@ -18,6 +18,7 @@
     <link  rel="stylesheet" href="style.css">
     </head>
 <body>
+    <!-- Nav part  -->
     <header>
         <button id="symbol">☰</button>
         <nav>
@@ -197,17 +198,52 @@
                 <!-- We show the top category of spending -->
             </div>
         </section>
-        <section id="settings">
-            <h3>Set your <span>Mood</span></h3>
-            <div class="container">
-                <div type="button" id="history ">Delete your History </div>
-                <div class="light">
-                    <p>Dark/white</p>
-                    <div>
+        <section id="settings" class="page">
+            <h3>Set your <span>Track wise</span></h3>
+            <!-- if container nor used please remove it  -->
+            
+                <div class="set" id="data"><p>Delete your History</p> <button>Delete</button> </div>
+                <div class="set" >
+                    <p class="hint">Dark/white</p>
+                    <div id="sun">
                         ☀
                     </div>
                 </div>
-            </div>
+                <div class="set">
+                    <p class="hint">Choose your currency</p>
+                    <select id="currency" >
+                        <option>USD</option>
+                        <option>EUR</option>
+                        <option>EGP</option>
+                    </select>
+                </div>
+                <div class="set">
+                    <p class="hint">You do not have account yet </p>
+                </div>
+                <div class="set">
+                    <p class="hint">About app</p>
+                    <div id="assay">
+                        <h3>What is <span>TrackWise?</span></h3>
+                        
+                        TrackWise is a personal finance management application designed to help users take control of their money. The app
+                        allows users to record income and expenses, monitor their current balance, and review their financial history in one
+                        place. With detailed reports and spending analysis, users can better understand their financial habits and make smarter
+                        budgeting decisions. TrackWise aims to provide a simple, organized, and efficient way to manage personal finances and
+                        achieve financial goals.
+                        
+                        <h3>Key <span>Features</span></h3>
+                        Track income and expenses easily.
+                        View current balance in real time.
+                        Access complete transaction history.
+                        Analyze spending through reports and statistics.
+                        Set financial goals and monitor progress.
+                        Manage personal settings and preferences.
+                        <h3>Our <span>Mission</span></h3>
+                        
+                        Our mission is to make personal finance management simple and accessible for everyone. TrackWise helps users build
+                        better financial habits, stay organized, and make informed decisions about their money every day.
+                    </div>
+                </div>
             <!-- Complete this and style it then go to javaScript -->
 
         </section>

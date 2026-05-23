@@ -10,12 +10,9 @@ body{
 }
 header,
 main,
-#home-sec ,
 .About ,
-#history,
-#add ,
 #his-buttons,
-#reports{
+.page{
     width: 100%;
     display:flex ; 
     flex-direction: column;
@@ -248,8 +245,11 @@ h3 , h2{
     justify-content: center;
     margin-top: 10px;
 }
-
-#add,#reports, #history ,#sign-up {
+#add,
+#reports,
+#history,
+#sign-up,
+#settings{
     display: none;
 }
 #sing-form{
@@ -272,6 +272,18 @@ h3 , h2{
 }
 .show{
     display : flex !important;
+}
+.set{
+    width : 100%;
+    display : flex; 
+    border-top:solid 1px #252525 ;
+    border-bottom:solid 1px #252525 ;
+    padding : 5px 0px  ;
+    background-color: #f5f5f5 ; 
+    margin: 10px 0 ;
+    font-weight: bold;
+    justify-content: space-between;
+    text-align: left;
 }
 /* Start javaScript  */
 /* we will complete history and reports section , change hover color  */

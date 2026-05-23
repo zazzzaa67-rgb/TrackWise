@@ -1,20 +1,30 @@
 // practice destructuring objects
 document.addEventListener("click" , function(e){
-    if(e.target.id === "symbol"){
-        document.querySelector("nav").classList.toggle("show")     
-    }
+    function showNav(){
+        if(e.target.id === "symbol"){
+            document.querySelector("nav").classList.toggle("show")     
+        }
+}
+    showNav()
     const pages = document.getElementsByClassName("page")
 
     //************ Navigation ***********/ 
     if (e.target.id == "Addbtn"){
         
         render(document.getElementById("add"))
+        showNav()
     }else if(e.target.id == "reportsbtn"){
         render(document.getElementById("reports"))
+        showNav()
     }else if(e.target.id == "Historybtn"){
         render(document.getElementById("history"))
+        showNav()
     }else if(e.target.id == "settingsbtn"){
-        render(document.getElementById("s"))
+        render(document.getElementById("settings"))
+        showNav()
+    }else if(e.target.id == "Homebtn") {
+        render(document.getElementById("home-sec"))
+        showNav()
     }
     
     function render(item){
@@ -25,6 +35,5 @@ document.addEventListener("click" , function(e){
         const show = document.getElementById(item)
         item.classList.remove("hide")
         item.classList.add("show")
-    }
-    
+    }    
 })
