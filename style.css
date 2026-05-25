@@ -384,6 +384,9 @@ h3 , h2{
         gap: 8px;
     }
 }
+#expense , #income{
+    cursor: pointer;
+}
 
 /* Start javaScript  */
 /* we will complete history and reports section , change hover color  */

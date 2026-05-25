@@ -1,10 +1,10 @@
 // practice destructuring objects
+const usertransactions = []
 
 document.addEventListener("click" , function(e){
     const pages = document.getElementsByClassName("page")
     const historyPage = document.getElementById("history")
     const transactions = document.getElementById("transactions")
-    const usertransactions = []
     //************ Navigation ***********/ 
     if (e.target.id == "Addbtn"){
         
@@ -23,25 +23,8 @@ document.addEventListener("click" , function(e){
         render(document.getElementById("home-sec"))
         hideNav()
     }
-    if(e.target.id == "add-info" ){
-        addform.addEventListener("submit" , e => {
-            e.preventDefault()
-            const data = new FormData(addform)
-            const addform = document.getElementById("add-info")
-            const usaddinfo = document.getElementsByClassName("adding-info")
-            usertransactions.push(
-                `<div>
-
-                </div>
-                `
-            // We will Start from here After 2 Hours man **********
-            )
-            
-            
-        } )
 
 
-    }
     function showNav(){
         if(e.target.id === "symbol"){
             document.querySelector("nav").classList.toggle("show")     
@@ -60,4 +43,23 @@ document.addEventListener("click" , function(e){
         item.classList.remove("hide")
         item.classList.add("show")
     }
+})
+
+
+
+const form = new FormData(document.getElementById("add-form"))
+function addTransaction(){
+    usertransactions.push(
+        `
+        <div class="info">
+            <h2>Transaction</h2>
+            <p>Kind : ${form.get("process_type")}</p>
+        </div>
+        `
+    )
+    console.log(form.get("process_type"))
+}
+form.addEventListener("submit" , e => {
+    e.preventDefault();
+    addTransaction()
 })

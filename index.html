@@ -71,10 +71,11 @@
             
 
         </section>
-        <section id="add" class="page">
+        <!-- **** Add section **** -->
 
+        <section id="add" class="page">
             <h2>Add <span>Process</span></h2>
-            <form id="add-info" class="new">
+            <form id="add-form" class="new">
                 <h2>Your process info </h2>
                 <label for="amount">Amount</label>
                 <input
@@ -117,16 +118,17 @@
                 placeholder=""
                 required
                 pattern="[110]+">
-                <fieldset>
+                <fieldset id="field">
                     <legend>Enter your process type</legend>
                     <label for="income">Income</label>
-                    <input type="radio" id="income" name="income" required >
+                    <input type="radio" id="income"  name="process_type" value="income" required >
                     <label for="expense">Expense</label>
-                    <input type="radio" id="expense" name="expense" required>
+                    <input type="radio" id="expense" name="process_type" value="expense" required>
                 </fieldset>
                 <button type="submit" id="addbtn">Submit</button>
             </form>
         </section>
+        <!-- **** History section **** -->
         <section id="history" class="page">
             <h2>Your Financial <span>transaction History</span> </h2>
             <img class="photo" src="photos/historyph.jpg" alt="photo for mony">
@@ -142,6 +144,7 @@
                 <p>No transactions yet.</p>
             </div>
         </section>
+        <!-- **** Reports Section **** -->
         <section id="reports" class="page">
             <h2>Manage your balance<span>Wisely</span></h2>
             <h3>Total <span>summary</span></h3>
