@@ -47,19 +47,14 @@ document.addEventListener("click" , function(e){
 
 
 
-const form = new FormData(document.getElementById("add-form"))
-function addTransaction(){
-    usertransactions.push(
-        `
-        <div class="info">
-            <h2>Transaction</h2>
-            <p>Kind : ${form.get("process_type")}</p>
-        </div>
-        `
-    )
-    console.log(form.get("process_type"))
-}
+const form = document.getElementById("add-form")
+
 form.addEventListener("submit" , e => {
     e.preventDefault();
-    addTransaction()
+    const formData = new FormData(form)
+    const selected = formData.get("process_type")
+    if(!selected){
+        console.log("select incomes or expenses ")
+    }
+    console.log(selected)
 })
