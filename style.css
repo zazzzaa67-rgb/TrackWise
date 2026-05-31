@@ -103,8 +103,9 @@ img{
     justify-content: center;
     flex-wrap: wrap;
 }
-.info , .total{
-    width: 200px ;
+.info{
+    width: 80% ;
+    max-width: 200px;
     height:200px ;
     border:solid 2px  #ffffff;
     border-radius: 4px;
@@ -118,6 +119,7 @@ img{
     font-weight: bold;
     line-height: 23px;    
     cursor: pointer;
+    box-sizing: border-box;
 }
 .info:hover{
     background-color:#14213d;
@@ -126,9 +128,12 @@ img{
     border: solid 2px #8e24d4;  
 }
 
+
 #quote-img{
     float: left;
-    width: 150px;
+    width: 30%;
+    /* object-fit: cover; */
+    max-width : 150px;  
     height: 150px;
     background-size: cover;
     margin-right: 10px;
@@ -143,10 +148,13 @@ img{
     background-color: #fff;
     border: solid 2px #252525;
     border-radius: 4px;
-    width: fit-content ;
+    width: 90% ;
+    max-width: 400px ;
     height: fit-content;
     display: flex;
     padding: 20px 15px ;
+    border: #dc2626 solid 2px ;
+    box-sizing: border-box;
 }
 h2{
     color:#252525;
@@ -154,9 +162,13 @@ h2{
 .signt{
     color: #ffffff;
 }
+.subheading{
+    color: #ffffff;
+}
 .new {
     margin: 10px auto;
-    width : 350px ;
+    width : 90% ;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     font-weight: bold;
@@ -167,21 +179,24 @@ h2{
     border-radius: 3px;
     height: 550px ; 
     justify-content: space-around;
+    box-sizing: border-box;
 }
 label{
     cursor: pointer;
-    margin-left: 35px;
+    
 }
 .adding-info , .user-info{
     margin: 3px auto;
-    width : 250px ;
+    width : 90% ;
     padding: 10px 15px ;
     font-weight:600;
     border: solid 1px #8e24d4;
     border-radius: 2px;
+
 }
 #addbtn ,.historybtn ,#singupbtn{
-    width : 200px ;
+    width : 70% ;
+    max-width: 250px;
     color : #ffffff;
     background-color: #8e24d4;
     border: solid 1px #ffffff;
@@ -216,7 +231,12 @@ h3 , h2{
     margin: 20px auto;
 }
 .container{
-    display : flex; 
+    display : flex;
+    flex-wrap: wrap; 
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
 }
 #categoty , 
 #monthly-report , 
@@ -236,14 +256,17 @@ h3 , h2{
 }
 .tample{
     display: flex;
-    min-height: 200px ;
     height: fit-content;
-    width:400px ;
+    width:90%; 
+    max-width: 400px;
     border: solid 2px #252525;
     border-radius: 3px ;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+}
+h2{
+    margin: 10px auto;
 }
 #add,
 #reports,
@@ -376,17 +399,6 @@ h3 , h2{
     margin-top: 10px;
 }
 
-/* mobile improvement */
-@media (max-width: 600px) {
-    .set {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-}
-#expense , #income{
-    cursor: pointer;
-}
 
 /* Start javaScript  */
 /* we will complete history and reports section , change hover color  */
