@@ -19,7 +19,9 @@ main,
     align-items: center;
     justify-content: center;
 }
-
+.page:not(#add){
+    text-align: center;
+}
 .link{
     margin-top: 10px ;
     padding: 9px 13px ;
@@ -158,6 +160,7 @@ img{
 }
 h2{
     color:#252525;
+    margin: 10px auto;
 }
 .signt{
     color: #ffffff;
@@ -264,9 +267,6 @@ h3 , h2{
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-}
-h2{
-    margin: 10px auto;
 }
 #add,
 #reports,
@@ -384,8 +384,7 @@ h2{
 
 
 /* About section */
-#set #assay,
-#assay {
+#set ,#assay{
     display: none;
     font-size: 13px;
     line-height: 1.6;

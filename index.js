@@ -6,20 +6,20 @@ document.addEventListener("click" , function(e){
     const historyPage = document.getElementById("history")
     const transactions = document.getElementById("transactions")
     //************ Navigation ***********/ 
-    if (e.target.id == "Addbtn"){
+    if (e.target.id == "Addbtn" || e.target.classList.contains("fa-plus") ){
         
         render(document.getElementById("add"))
         hideNav()
-    }else if(e.target.id == "reportsbtn"){
+    }else if(e.target.id == "reportsbtn" || e.target.classList.contains("fa-chart-bar")){
         render(document.getElementById("reports"))
         hideNav()
-    }else if(e.target.id == "Historybtn"){
+    }else if(e.target.id == "Historybtn" || e.target.classList.contains("fa-clock-rotate-left")){
         render(document.getElementById("history"))
         hideNav()
-    }else if(e.target.id == "settingsbtn"){
+    }else if(e.target.id == "settingsbtn" || e.target.classList.contains("fa-bars-staggered")){
         render(document.getElementById("settings"))
         hideNav()
-    }else if(e.target.id == "Homebtn") {
+    }else if(e.target.id == "Homebtn" || e.target.classList.contains("fa-house")) {
         render(document.getElementById("home-sec"))
         hideNav()
     }
@@ -44,17 +44,30 @@ document.addEventListener("click" , function(e){
         item.classList.add("show")
     }
 })
-
-
-
-const form = document.getElementById("add-form")
-
-form.addEventListener("submit" , e => {
-    e.preventDefault();
+function addtrasection(){
+    const form = document.getElementById("add-form")
     const formData = new FormData(form)
     const selected = formData.get("process_type")
+    const amount = formData.get("amount")
+    const category = formData.get("category")
+    const date = formData.get("date")
+    const note = formData.get("note")
+    const time = formData.get("time")
+    usertransactions.push(
+        // tomorrow I will push the object
+        `
+        `)
+    
+    
+
+
     if(!selected){
         console.log("select incomes or expenses ")
     }
-    console.log(selected)
+    
+
+}
+console.log( new Date())
+form.addEventListener("submit" , e => {
+    e.preventDefault();
 })
