@@ -45,29 +45,23 @@ document.addEventListener("click" , function(e){
     }
 })
 function addtrasection(){
-    const form = document.getElementById("add-form")
-    const formData = new FormData(form)
-    const selected = formData.get("process_type")
-    const amount = formData.get("amount")
-    const category = formData.get("category")
-    const date = formData.get("date")
-    const note = formData.get("note")
-    const time = formData.get("time")
+    
+    const formData = new FormData(document.getElementById("add-form"))
+    
     usertransactions.push(
-        // tomorrow I will push the object
-        `
-        `)
+        {
+            amount : Number(formData.get("amount")),
+            category : formData.get("category"),
+            date : new Date().toLocaleDateString(),
+            note : formData.get("note"),
+            time : new Date.toLocaleTimeString(),
+            selected : formData.get("process_type")
+                }
+        
+        
+        )
     
-    
-
-
-    if(!selected){
-        console.log("select incomes or expenses ")
     }
-    
+console.log( new Date().toLocaleTimeString())
 
-}
-console.log( new Date())
-form.addEventListener("submit" , e => {
-    e.preventDefault();
-})
+
