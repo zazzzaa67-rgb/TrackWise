@@ -45,23 +45,27 @@ document.addEventListener("click" , function(e){
     }
 })
 function addtrasection(){
-    
-    const formData = new FormData(document.getElementById("add-form"))
-    
-    usertransactions.push(
-        {
-            amount : Number(formData.get("amount")),
-            category : formData.get("category"),
-            date : new Date().toLocaleDateString(),
-            note : formData.get("note"),
-            time : new Date.toLocaleTimeString(),
-            selected : formData.get("process_type")
-                }
-        
-        
-        )
-    
-    }
-console.log( new Date().toLocaleTimeString())
+        const formData = new FormData(document.getElementById("add-form"))
+        usertransactions.push(
+            {
+                amount : Number(formData.get("amount")),
+                category : formData.get("category"),
+                date : new Date().toLocaleDateString(),
+                note : formData.get("note"),
+                time : new Date().toLocaleTimeString(),
+                selected : formData.get("process_type"),
+                id : Date.now(),
+            }
+            )
+            const totalIncomes = usertransactions.reduce((sum , transaction ) => sum + Number(transaction.amount),0 )
 
-
+            const incomesContainers = document.querySelectorAll(".incomes")
+            for(let i of incomesContainers){
+                i.innerHTML= totalIncomes
+            }
+}
+const form = document.getElementById("add-form")
+form.addEventListener("submit" , e=>{
+    e.preventDefault()
+    addtrasection()
+})
