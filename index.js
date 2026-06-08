@@ -1,5 +1,8 @@
 // practice destructuring objects
 const usertransactions = []
+const userincomesCon = document.querySelector(".incomes") 
+const userEexpensesCon = document.querySelector(".expenses")
+const confirmMessage = document.getElementById("confirm")
 
 document.addEventListener("click" , function(e){
     const pages = document.getElementsByClassName("page")
@@ -45,6 +48,7 @@ document.addEventListener("click" , function(e){
     }
 })
 function addtrasection(){
+
         const formData = new FormData(document.getElementById("add-form"))
         usertransactions.push(
             {
@@ -57,12 +61,23 @@ function addtrasection(){
                 id : Date.now(),
             }
             )
-            const totalIncomes = usertransactions.reduce((sum , transaction ) => sum + Number(transaction.amount),0 )
-
-            const incomesContainers = document.querySelectorAll(".incomes")
-            for(let i of incomesContainers){
-                i.innerHTML= totalIncomes
+        confirmMessage.classList.add("message")
+        usertransactions.forEach(e =>{
+            if(e.selected == "income"){
+                Number(userincomesCon).textContent += e.amount
+                confirmMessage.textContent = "✓ Operation completed successfully."
+            }else if(e.selected === "expense" || Number(userincomesCon.value) != 0 ){
+                userEexpensesCon += e.amount
+                userincomesCon -= e.amount  
+                confirmMessage.textContent = "✓ Operation completed successfully."
+            }else if (e.selected === "expense" || Number(userincomesCon.value) < Number(e.amount)){
+                confirmMessage.textContent = "Opps , you do not have enough mony."
+                
             }
+
+        })
+
+
 }
 const form = document.getElementById("add-form")
 form.addEventListener("submit" , e=>{

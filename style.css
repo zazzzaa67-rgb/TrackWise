@@ -170,7 +170,7 @@ h2{
 }
 .new {
     margin: 10px auto;
-    width : 90% ;
+    width : 100% ;
     max-width: 400px;
     display: flex;
     flex-direction: column;
@@ -396,7 +396,21 @@ h3 , h2{
     font-size: 16px;
     margin-top: 10px;
 }
-
+.message{
+    display: block;
+    width: 80%; 
+    padding : 1.5rem 1rem; 
+    background-color: #3d095f;
+    border: 2px solid #ffffff;
+    border-radius: 2px ;
+    color: #adff2f;
+    font-weight: 600;
+    max-width: 27rem;
+    box-shadow: 1px 1px .75rem #252525;
+    margin: 1.5rem auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
 
 /* Start javaScript  */
 /* we will complete history and reports section , change hover color  */
