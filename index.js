@@ -1,8 +1,10 @@
 // practice destructuring objects
 const usertransactions = []
-const userincomesCon = document.querySelector(".incomes") 
-const userEexpensesCon = document.querySelector(".expenses")
+const userincomesCon = document.getElementsByClassName("incomes") 
+const userEexpensesCon = document.getElementsByClassName("expenses")
 const confirmMessage = document.getElementById("confirm")
+let  totalIncomes = 0
+let  totalExpenses = 0 
 
 document.addEventListener("click" , function(e){
     const pages = document.getElementsByClassName("page")
@@ -48,7 +50,6 @@ document.addEventListener("click" , function(e){
     }
 })
 function addtrasection(){
-
         const formData = new FormData(document.getElementById("add-form"))
         usertransactions.push(
             {
@@ -62,25 +63,30 @@ function addtrasection(){
             }
             )
         confirmMessage.classList.add("message")
-        usertransactions.forEach(e =>{
-            if(e.selected == "income"){
-                Number(userincomesCon).textContent += e.amount
+        const newTransaction= usertransactions[usertransactions.length-1]
+        console.log(newTransaction)
+            if(newTransaction.selected == "income"){
+                totalIncomes += Number(newTransaction.amount)
                 confirmMessage.textContent = "✓ Operation completed successfully."
-            }else if(e.selected === "expense" || Number(userincomesCon.value) != 0 ){
-                userEexpensesCon += e.amount
-                userincomesCon -= e.amount  
+            }else if(newTransaction.selected === "expense" && Number(totalIncomes) > newTransaction.amount){
+                totalExpenses += Number(newTransaction.amount)
+                totalIncomes -= Number(newTransaction.amount) 
                 confirmMessage.textContent = "✓ Operation completed successfully."
-            }else if (e.selected === "expense" || Number(userincomesCon.value) < Number(e.amount)){
-                confirmMessage.textContent = "Opps , you do not have enough mony."
+            }else{
+                confirmMessage.textContent = "Opps , you do not have anough mony "
                 
             }
-
-        })
-
-
-}
+        }
+        for (let con of userEexpensesCon){
+            con.textContent = totalExpenses
+        }
+        for(let con of userincomesCon){
+            con.textContent = totalIncomes
+        }
 const form = document.getElementById("add-form")
 form.addEventListener("submit" , e=>{
     e.preventDefault()
     addtrasection()
 })
+console.log(totalExpenses)
+console.log(userEexpensesCon)
