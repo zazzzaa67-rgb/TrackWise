@@ -3,9 +3,9 @@ const usertransactions = []
 const userincomesCon = document.getElementsByClassName("incomes") 
 const userEexpensesCon = document.getElementsByClassName("expenses")
 const confirmMessage = document.getElementById("confirm")
+const category = document.getElementById("categoty")
 let  totalIncomes = 0
 let  totalExpenses = 0 
-
 document.addEventListener("click" , function(e){
     const pages = document.getElementsByClassName("page")
     const historyPage = document.getElementById("history")
@@ -63,26 +63,39 @@ function addtrasection(){
             }
             )
         confirmMessage.classList.add("message")
+        setTimeout(function(){
+            confirmMessage.classList.remove("message")
+            confirmMessage.textContent = ""
+        }, 1000)
         const newTransaction= usertransactions[usertransactions.length-1]
         console.log(newTransaction)
             if(newTransaction.selected == "income"){
                 totalIncomes += Number(newTransaction.amount)
                 confirmMessage.textContent = "✓ Operation completed successfully."
-            }else if(newTransaction.selected === "expense" && Number(totalIncomes) > newTransaction.amount){
+                confirmMessage.style.color = "#adff2f" 
+            }else if(newTransaction.selected === "expense" && Number(totalIncomes) >= newTransaction.amount){
                 totalExpenses += Number(newTransaction.amount)
                 totalIncomes -= Number(newTransaction.amount) 
                 confirmMessage.textContent = "✓ Operation completed successfully."
+                confirmMessage.style.color = "#adff2f"
             }else{
                 confirmMessage.textContent = "Opps , you do not have anough mony "
-                
+                confirmMessage.style.color = "red"
             }
-        }
         for (let con of userEexpensesCon){
-            con.textContent = totalExpenses
+        con.textContent = totalExpenses
         }
         for(let con of userincomesCon){
             con.textContent = totalIncomes
         }
+        let categoryPerc = (newTransaction.amount / totalExpenses ) * 100
+        category.innerHTML+=`
+        <div>
+        <p>${newTransaction.category}</p>
+        <p>${categoryPerc}%</p>`
+        console.log(categoryPerc)
+        }
+
 const form = document.getElementById("add-form")
 form.addEventListener("submit" , e=>{
     e.preventDefault()
