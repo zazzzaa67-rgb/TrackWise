@@ -92,8 +92,8 @@ function addtrasection(){
         category.innerHTML+=`
         <div>
         <p>${newTransaction.category}</p>
-        <p>${categoryPerc}%</p>`
-        console.log(categoryPerc)
+        <p>${categoryPerc}%</p>
+        </div>`
         }
 
 const form = document.getElementById("add-form")
