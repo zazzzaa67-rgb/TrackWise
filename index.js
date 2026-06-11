@@ -89,9 +89,10 @@ function addtrasection(){
             con.textContent = totalIncomes
         }
         let categoryPerc = (newTransaction.amount / totalExpenses ) * 100
+
         category.innerHTML+=`
-        <div>
-        <p>${newTransaction.category}</p>
+        <div class="category">
+        <p>${newTransaction.category} </p>
         <p>${categoryPerc}%</p>
         </div>`
         }
