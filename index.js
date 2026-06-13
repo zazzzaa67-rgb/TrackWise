@@ -62,45 +62,18 @@ function addtrasection(){
                 id : Date.now(),
             }
             )
-        confirmMessage.classList.add("message")
-        setTimeout(function(){
-            confirmMessage.classList.remove("message")
-            confirmMessage.textContent = ""
-        }, 1000)
-        const newTransaction= usertransactions[usertransactions.length-1]
-        console.log(newTransaction)
-            if(newTransaction.selected == "income"){
-                totalIncomes += Number(newTransaction.amount)
-                confirmMessage.textContent = "✓ Operation completed successfully."
-                confirmMessage.style.color = "#adff2f" 
-            }else if(newTransaction.selected === "expense" && Number(totalIncomes) >= newTransaction.amount){
-                totalExpenses += Number(newTransaction.amount)
-                totalIncomes -= Number(newTransaction.amount) 
-                confirmMessage.textContent = "✓ Operation completed successfully."
-                confirmMessage.style.color = "#adff2f"
-            }else{
-                confirmMessage.textContent = "Opps , you do not have anough mony "
-                confirmMessage.style.color = "red"
-            }
-        for (let con of userEexpensesCon){
-        con.textContent = totalExpenses
-        }
-        for(let con of userincomesCon){
-            con.textContent = totalIncomes
-        }
-        let categoryPerc = (newTransaction.amount / totalExpenses ) * 100
-
-        category.innerHTML+=`
-        <div class="category">
-        <p>${newTransaction.category} </p>
-        <p>${categoryPerc}%</p>
-        </div>`
-        }
+    }
+function calculation(){
+    for (transaction of usertransactions){
+        if (transaction.selected){}
+    }
+    // ##### we will start from here tomorrow 
+}
 
 const form = document.getElementById("add-form")
 form.addEventListener("submit" , e=>{
     e.preventDefault()
     addtrasection()
 })
-console.log(totalExpenses)
-console.log(userEexpensesCon)
+// console.log(totalExpenses)
+// console.log(userEexpensesCon)
