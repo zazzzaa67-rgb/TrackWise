@@ -107,8 +107,8 @@ img{
     flex-wrap: wrap;
 }
 .info{
-    width: 80% ;
-    max-width: 200px;
+    width: 90% ;
+    max-width: 270px;
     height:200px ;
     border:solid 2px  #ffffff;
     border-radius: 4px;
@@ -123,6 +123,7 @@ img{
     line-height: 23px;    
     cursor: pointer;
     box-sizing: border-box;
+    font-size: 1.2rem;
 }
 .info:hover{
     background-color:#14213d;

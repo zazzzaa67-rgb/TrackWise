@@ -3,7 +3,6 @@ const usertransactions = []
 const userincomesCon = document.getElementsByClassName("incomes") 
 const userEexpensesCon = document.getElementsByClassName("expenses")
 const confirmMessage = document.getElementById("confirm")
-const category = document.getElementById("categoty")
 let  totalIncomes = 0
 let  totalExpenses = 0 
 document.addEventListener("click" , function(e){
@@ -28,8 +27,8 @@ document.addEventListener("click" , function(e){
         render(document.getElementById("home-sec"))
         hideNav()
     }
-
-
+    
+    
     function showNav(){
         if(e.target.id === "symbol"){
             document.querySelector("nav").classList.toggle("show")     
@@ -49,12 +48,17 @@ document.addEventListener("click" , function(e){
         item.classList.add("show")
     }
 })
+const form = document.getElementById("add-form")
+form.addEventListener("submit" , e=>{
+    e.preventDefault()
+    addtrasection()
+})
 function addtrasection(){
-        const formData = new FormData(document.getElementById("add-form"))
-        usertransactions.push(
-            {
-                amount : Number(formData.get("amount")),
-                category : formData.get("category"),
+    const formData = new FormData(document.getElementById("add-form"))
+    usertransactions.push(
+        {
+            amount : Number(formData.get("amount")),
+            category : formData.get("category"),
                 date : new Date().toLocaleDateString(),
                 note : formData.get("note"),
                 time : new Date().toLocaleTimeString(),
@@ -62,6 +66,17 @@ function addtrasection(){
                 id : Date.now(),
             }
             )
+        totalExpenses = 0 
+        totalIncomes = 0 
+        for(transaction of usertransactions){
+            if (transaction.selected =="income"){
+                totalIncomes += transaction.amount
+            }else{
+                totalExpenses += transaction.amount
+            }
+        }
+        console.log(totalIncomes)
+        console.log(totalExpenses)
     }
 function calculation(){
     for (transaction of usertransactions){
@@ -70,10 +85,8 @@ function calculation(){
     // ##### we will start from here tomorrow 
 }
 
-const form = document.getElementById("add-form")
-form.addEventListener("submit" , e=>{
-    e.preventDefault()
-    addtrasection()
-})
+function render(){
+
+}
 // console.log(totalExpenses)
 // console.log(userEexpensesCon)
